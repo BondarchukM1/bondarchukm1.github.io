@@ -34,9 +34,9 @@
               <img class="button-icon" src="img/enter.svg" alt="member" />
               <p class="button-text">Войти</p>
             </div>
-            <div class="button">
+            <div class="button cart-button">
               <img class="button-icon" src="img/Cart.svg" alt="Cart" />
-              <p class="button-text cart-button">Корзина</p>
+              <p class="button-text" id="cart1-button">Корзина</p>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@
           </div>
           <!-- /.restaurants__heading -->
           <div class="cards">
-            <a href="restaurant.html" class="card card--hover" target="_blank">
+            <a href="restaurant.html" class="card card--hover" >
               <img src="img/imageP1.jpg" alt="pizza plus" class="card__img" />
               <div class="card__text">
                 <div class="card__title">
@@ -80,7 +80,7 @@
                 </div>
               </div>
             </a>
-            <a href="restaurant.html" class="card card--hover" target="_blank">
+            <a href="restaurant.html" class="card card--hover" >
               <img src="img/imageP2.jpg" alt="tanuki" class="card__img" />
               <div class="card__text">
                 <div class="card__title">
@@ -94,7 +94,7 @@
                 </div>
               </div>
             </a>
-            <a href="restaurant.html" class="card card--hover" target="_blank">
+            <a href="restaurant.html" class="card card--hover" >
               <img src="img/imageP3.jpg" alt="foodband" class="card__img" />
               <div class="card__text">
                 <div class="card__title">
@@ -108,7 +108,7 @@
                 </div>
               </div>
             </a>
-            <a href="restaurant.html" class="card card--hover" target="_blank">
+            <a href="restaurant.html" class="card card--hover" >
               <img src="img/imageP4.jpg" alt="Zpizza" class="card__img" />
               <div class="card__text">
                 <div class="card__title">
@@ -122,7 +122,7 @@
                 </div>
               </div>
             </a>
-            <a href="restaurant.html" class="card card--hover" target="_blank">
+            <a href="restaurant.html" class="card card--hover" >
               <img src="img/imageP5.jpg" alt="Foodpoint" class="card__img" />
               <div class="card__text">
                 <div class="card__title">
@@ -136,7 +136,7 @@
                 </div>
               </div>
             </a>
-            <a href="restaurant.html" class="card card--hover" target="_blank">
+            <a href="restaurant.html" class="card card--hover" >
               <img src="img/imageP6.jpg" alt="pizzaburger" class="card__img" />
               <div class="card__text">
                 <div class="card__title">
@@ -166,20 +166,20 @@
             <a href="#" class="nav-link">Контакты</a>
           </nav>
           <div class="footer__social">
-            <a href="#" class="social-link" target="_blank"
+            <a href="#" target="_blank" class="social-link" 
               ><img src="img/Inst.svg" alt="Instagram"
             /></a>
-            <a href="#" class="social-link" target="_blank"
+            <a href="#" target="_blank" class="social-link" 
               ><img src="img/Fb.svg" alt="Facebook"
             /></a>
-            <a href="#" class="social-link" target="_blank"
+            <a href="#" target="_blank" class="social-link" 
               ><img src="img/Vk.svg" alt="Vk"
             /></a>
           </div>
         </div>
       </div>
     </footer>
-    <div class="modal">
+    <div class="modal animate__animated animate__fadeIn">
       <div class="modal-dialog">
         <div class="modal__header">
           <h3 class="modal__title">Корзина</h3>
@@ -236,12 +236,12 @@
           <div class="modal__price">1250 ₽</div>
           <div class="modal__buttons">
             <div class="button modal-button button-yes">Оформить заказ</div>
-            <div class="button modal-button button-no close">Отмена</div>
+            <div class="button modal-button button-no close-this">Отмена</div>
           </div>
         </div>
       </div>
     </div>
     <script src="js/main.js"></script>
-      <script src="js/wow.min.js"></script>
+    <script src="js/wow.min.js"></script>
   </body>
 </html>

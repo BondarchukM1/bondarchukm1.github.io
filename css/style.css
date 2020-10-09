@@ -152,9 +152,10 @@
 }
 
 .card__img {
-  width: 384px;
-  height: 250px;
-  object-fit: cover;
+  width: 100%;
+
+  object-fit: scale-down;
+
   transition: transform 0.2s linear;
 }
 
@@ -283,68 +284,7 @@
 .social-link:hover {
   transform: scale(1.1);
 }
-@media (max-width: 1366px) {
-  .container {
-    max-width: 992px;
-  }
 
-  .promo {
-    background-position: top right -230px;
-  }
-  .card {
-    flex-basis: 31%;
-  }
-  .card__info {
-    flex-wrap: wrap;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 1100px) {
-  .container {
-    max-width: 768px;
-  }
-  .promo {
-    background-position: top right -370px;
-  }
-  .promo__title {
-    font-size: 32px;
-    line-height: 38px;
-  }
-  .promo__text {
-    width: 400px;
-  }
-  .card {
-    flex-basis: 48%;
-  }
-}
-
-@media (max-width: 992px) {
-  .container {
-    max-width: 700px;
-  }
-  .promo {
-    background-size: 600px;
-    background-position: top right -360px;
-    padding: 50px;
-    height: 280px;
-  }
-  .promo__title {
-    font-size: 32px;
-    line-height: 38px;
-  }
-
-  .footer__content {
-    padding: 20px 0;
-  }
-  .footer__nav {
-    margin: auto;
-    flex-wrap: wrap;
-  }
-  .nav-link {
-    font-size: 14px;
-  }
-}
 .modal {
   background: rgba(0, 0, 0, 0.4);
   position: fixed;
@@ -456,7 +396,70 @@
   color: #fff;
 }
 
-. @media (max-width: 768px) {
+@media (max-width: 1366px) {
+  .container {
+    max-width: 992px;
+  }
+
+  .promo {
+    background-position: top right -230px;
+  }
+  .card {
+    flex-basis: 31%;
+  }
+  .card__info {
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .container {
+    max-width: 768px;
+  }
+  .promo {
+    background-position: top right -370px;
+  }
+  .promo__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .promo__text {
+    width: 400px;
+  }
+  .card {
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 700px;
+  }
+  .promo {
+    background-size: 600px;
+    background-position: top right -360px;
+    padding: 50px;
+    height: 280px;
+  }
+  .promo__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .footer__content {
+    padding: 20px 0;
+  }
+  .footer__nav {
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
   .container {
     max-width: 576px;
   }
@@ -550,6 +553,20 @@
   }
   .card__img {
     width: 100%;
+    object-fit: cover;
+  }
+  .modal__footer {
+    flex-wrap: wrap;
+  }
+  .modal__price {
+    width: 105px;
+  }
+  .modal__buttons {
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .modal__body {
+    max-height: 70%;
   }
 }
 
@@ -581,5 +598,19 @@
   }
   .button-icon {
     margin: 0;
+  }
+  .modal-dialog {
+    padding: 20px;
+  }
+  .modal__title {
+    font-size: 20px;
+  }
+  .food-name,
+  .food-price {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .modal__header {
+    margin-bottom: 15px;
   }
 }
