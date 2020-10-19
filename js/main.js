@@ -15,7 +15,7 @@ const loginInput = document.querySelector(".login");
 const passInput = document.querySelector(".password");
 const cardsRestaurants = document.querySelector(".cards-restaurants");
 const cardsGoods = document.querySelector(".cards-goods");
-const promo = document.querySelector(".promo");
+const promo = document.querySelector(".promoblock");
 const restaurantsBlock = document.querySelector(".restaurants-block");
 const logo = document.querySelector(".logo");
 const goods = document.querySelector(".goods");
@@ -176,3 +176,14 @@ function createCardsGoods() {
    cardsGoods.insertAdjacentHTML('beforeend', card);
 }
 //createCardsGoods();
+
+new Swiper('.swiper-container', {
+  loop: true,
+  autoplay: true,
+  spped: 10,
+  delay: 400,
+  
+  effect:'flip',//"slide", "fade", "cube", "coverflow" or "flip"
+
+ 
+})  

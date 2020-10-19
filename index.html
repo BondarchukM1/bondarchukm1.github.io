@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style-normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
@@ -48,16 +49,64 @@
         </div>
       </div>
     </header>
-    <div class="main  ">
+   
       <!-- .promo -->
-      <section class="promo container shadow wow zoomInUp">
-        <h1 class="promo__title">Онлайн-сервис<br />доставки еды на дом</h1>
-        <p class="promo__text">
-          Блюда из любимого ресторана привезет курьер в перчатках, маске и с
-          антисептиком
-        </p>
-      </section>
-      <!-- /.promo -->
+   
+      <div class="swiper-container promoblock">
+ 
+        <div class="swiper-wrapper  ">
+        
+          <div class="swiper-slide">
+            <div class=" promo promo1 container shadow ">
+              <h1 class="promo__title">Онлайн-сервис<br />доставки еды на дом</h1>
+              <p class="promo__text">
+                Блюда из любимого ресторана привезет курьер в перчатках, маске и с
+                антисептиком
+              </p>
+          </div>
+        </div>
+          <div class="swiper-slide">
+            <div class=" promo promo2 container shadow ">
+              <h1 class="promo__title">Онлайн-сервис<br />доставки еды на дом</h1>
+              <p class="promo__text">
+                Любимые бургеры и картошечку привезет курьер в перчатках, маске и с
+                антисептиком
+              </p>
+          </div>
+        </div>
+          <div class="swiper-slide">
+            <div class=" promo promo3 container shadow ">
+              <h1 class="promo__title">Онлайн-сервис<br />доставки еды на дом</h1>
+              <p class="promo__text">
+                Домашние бутеры, салатик и чаёк привезет курьер в перчатках, маске и с
+                антисептиком
+              </p>
+          </div>
+        </div>
+          <div class="swiper-slide"> 
+            <div class=" promo promo4 container shadow ">
+              <h1 class="promo__title">Онлайн-сервис<br />доставки еды на дом</h1>
+              <p class="promo__text">
+                Фирменные суши от шеф-повара привезет курьер в перчатках, маске и с
+                антисептиком
+              </p>
+          </div>
+        </div>
+        </div>
+      </div>
+         <!--If we need pagination
+        <div class="swiper-pagination"></div> -->
+      
+        <!-- If we need navigation buttons 
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>-->
+      
+        <!-- If we need scrollbar 
+        <div class="swiper-scrollbar"></div>
+      </div>-->
+  
+      <!--/.promo -->
+       <div class="main  ">
       <div class="restaurants-block">
         <section class="restaurants  animate__animated animate__fadeIn">
           <div class="container">
@@ -70,90 +119,7 @@
             </div>
             <!-- /.restaurants__heading -->
             <div class="cards cards-restaurants">
-              <!-- <a href="restaurant.html" class="card card--hover wow flipInX" >
-                      <img src="img/imageP1.jpg" alt="pizza plus" class="card__img" />
-                      <div class="card__text">
-                        <div class="card__title">
-                          <h3 class="card__name">Пицца плюс</h3>
-                          <div class="card__time">50 мин</div>
-                        </div>
-                        <div class="card__info">
-                          <div class="card__star">4.5</div>
-                          <div class="card__price">От 900 ₽</div>
-                          <div class="card__type">Пицца</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="restaurant.html" class="card card--hover wow  flipInX" >
-                      <img src="img/imageP2.jpg" alt="tanuki" class="card__img" />
-                      <div class="card__text">
-                        <div class="card__title">
-                          <h3 class="card__name">Тануки</h3>
-                          <div class="card__time">60 мин</div>
-                        </div>
-                        <div class="card__info">
-                          <div class="card__star">5.0</div>
-                          <div class="card__price">От 1500 ₽</div>
-                          <div class="card__type">Ролы</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="restaurant.html" class="card card--hover  wow flipInX" >
-                      <img src="img/imageP3.jpg" alt="foodband" class="card__img" />
-                      <div class="card__text">
-                        <div class="card__title">
-                          <h3 class="card__name">FoodBand</h3>
-                          <div class="card__time">30 мин</div>
-                        </div>
-                        <div class="card__info">
-                          <div class="card__star">3.3</div>
-                          <div class="card__price">От 700 ₽</div>
-                          <div class="card__type">Набор</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="restaurant.html" class="card card--hover wow flipInX" >
-                      <img src="img/imageP4.jpg" alt="Zpizza" class="card__img" />
-                      <div class="card__text">
-                        <div class="card__title">
-                          <h3 class="card__name">Жадина-пицца</h3>
-                          <div class="card__time">20 мин</div>
-                        </div>
-                        <div class="card__info">
-                          <div class="card__star">4.4</div>
-                          <div class="card__price">От 200 ₽</div>
-                          <div class="card__type">Пицца</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="restaurant.html" class="card card--hover wow flipInX" >
-                      <img src="img/imageP5.jpg" alt="Foodpoint" class="card__img" />
-                      <div class="card__text">
-                        <div class="card__title">
-                          <h3 class="card__name">Точка еды</h3>
-                          <div class="card__time">45 мин</div>
-                        </div>
-                        <div class="card__info">
-                          <div class="card__star">4.9</div>
-                          <div class="card__price">От 800 ₽</div>
-                          <div class="card__type">Набор</div>
-                        </div>
-                      </div>
-                    </a>
-                    <a href="restaurant.html" class="card card--hover wow flipInX" >
-                      <img src="img/imageP6.jpg" alt="pizzaburger" class="card__img" />
-                      <div class="card__text">
-                        <div class="card__title">
-                          <h3 class="card__name">PizzaBurger</h3>
-                          <div class="card__time">33 мин</div>
-                        </div>
-                        <div class="card__info">
-                          <div class="card__star">4.0</div>
-                          <div class="card__price">От 600 ₽</div>
-                          <div class="card__type">Пицца</div>
-                        </div>
-                      </div>
-                    </a>-->
+             
             </div>
           </div>
         </section>
@@ -174,125 +140,7 @@
               </div>
               <!-- /.restaurants__heading -->
               <div class="cards cards-goods  ">
-               <!-- <div class="card  wow flipInX">
-                  <img src="img/r_tanuki1.jpg" alt="pizza plus" class="card__img" />
-                  <div class="card__text">
-                    <div class="card__title">
-                      <h3 class="card__name card__name--reg">
-                        Ролл угорь стандарт плюс
-                      </h3>
-                    </div>
-                    <p class="card__ingredients">
-                      Рис, угорь, соус унаги, кунжут, водоросли нори.
-                    </p>
-                    <div class="button-price">
-                      <div class="button-cart button cart-button">
-                        В корзину
-                        <img class="button-icon--right" src="img/cart-white.svg" alt="" />
-                      </div>
-                      <div class="card__food-price">250 ₽</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card  wow flipInX">
-                  <img src="img/r_tanuki2.jpg" alt="pizza plus" class="card__img" />
-                  <div class="card__text">
-                    <div class="card__title">
-                      <h3 class="card__name card__name--reg">
-                        Калифорния лосось стандарт
-                      </h3>
-                    </div>
-                    <p class="card__ingredients">
-                      Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли
-                      нори.
-                    </p>
-                    <div class="button-price">
-                      <div class="button-cart button cart-button">
-                        В корзину
-                        <img class="button-icon--right" src="img/cart-white.svg" alt="" />
-                      </div>
-                      <div class="card__food-price">395 ₽</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card  wow flipInX">
-                  <img src="img/r_tanuki3.jpg" alt="pizza plus" class="card__img" />
-                  <div class="card__text">
-                    <div class="card__title">
-                      <h3 class="card__name card__name--reg">Окинава стандарт</h3>
-                    </div>
-                    <p class="card__ingredients">
-                      Рис, креветка отварная, сыр сливочный, лосось, огурец
-                      свежий...
-                    </p>
-                    <div class="button-price">
-                      <div class="button-cart button cart-button">
-                        В корзину
-                        <img class="button-icon--right" src="img/cart-white.svg" alt="" />
-                      </div>
-                      <div class="card__food-price">250 ₽</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card wow flipInX">
-                  <img src="img/r_tanuki4.jpg" alt="pizza plus" class="card__img" />
-                  <div class="card__text">
-                    <div class="card__title">
-                      <h3 class="card__name card__name--reg">Цезарь маки хl</h3>
-                    </div>
-                    <p class="card__ingredients">
-                      Рис, куриная грудка копченая, икра масаго, томат, айсберг,
-                      соус цезарь...
-                    </p>
-                    <div class="button-price">
-                      <div class="button-cart button cart-button">
-                        В корзину
-                        <img class="button-icon--right" src="img/cart-white.svg" alt="" />
-                      </div>
-                      <div class="card__food-price">440 ₽</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card wow flipInX">
-                  <img src="img/r_tanuki5.jpg" alt="pizza plus" class="card__img" />
-                  <div class="card__text">
-                    <div class="card__title">
-                      <h3 class="card__name card__name--reg">
-                        Ролл с креветкой стандарт
-                      </h3>
-                    </div>
-                    <p class="card__ingredients">
-                      Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы
-                    </p>
-                    <div class="button-price">
-                      <div class="button-cart button cart-button">
-                        В корзину
-                        <img class="button-icon--right" src="img/cart-white.svg" alt="" />
-                      </div>
-                      <div class="card__food-price">250 ₽</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card wow flipInX">
-                  <img src="img/r_tanuki6.jpg" alt="pizza plus" class="card__img" />
-                  <div class="card__text">
-                    <div class="card__title">
-                      <h3 class="card__name card__name--reg">
-                        Ролл угорь стандарт плюс
-                      </h3>
-                    </div>
-                    <p class="card__ingredients">
-                      Рис, угорь, соус унаги, кунжут, водоросли нори.
-                    </p>
-                    <div class="button-price">
-                      <div class="button-cart button cart-button">
-                        В корзину
-                        <img class="button-icon--right" src="img/cart-white.svg" alt="" />
-                      </div>
-                      <div class="card__food-price">250 ₽</div>
-                    </div>
-                  </div>
-                </div>-->
+               
               </div>
             </div>
           </section>
@@ -300,6 +148,9 @@
         </div>
       <!--/.restoran-->
     </div>
+
+
+    
     <footer class="footer wow fadeInUp">
       <div class="container">
         <div class="footer__content">
@@ -406,9 +257,13 @@
 
      </div>
     </div>
-      <!--/Autorization-->
+      <!--/Autorization--> 
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/wow.init.js"></script>
+    <!--<script src="js/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>-->
+   
   </body>
 </html>

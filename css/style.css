@@ -114,13 +114,26 @@
   order: -1;
   margin-right: 20px;
 }
+
 .promo {
   height: 300px;
-  background: #fff1b8 url(../img/pizza.png) no-repeat top right -20px / 680px;
+
   filter: drop-shadow(0px 7px 12px rgba(158, 158, 163, 0.1));
   padding: 70px;
   border-radius: 10px;
   margin-bottom: 56px;
+}
+.promo1 {
+  background: #fff1b8 url(../img/pizza.png) no-repeat top right -20px / 680px;
+}
+.promo2 {
+  background: #04d674ab url(../img/burger.png) no-repeat top right -20px / 680px;
+}
+.promo3 {
+  background: #ffc13bc0 url(../img/buter.png) no-repeat top right -60px / 680px;
+}
+.promo4 {
+  background: #03d5f1ab url(../img/sushi.png) no-repeat top right -40px / 680px;
 }
 .promo__title {
   font-weight: bold;
@@ -450,10 +463,13 @@
   }
 
   .promo {
-    background-position: top right -230px;
+    background-position: top right -250px;
   }
   .card {
     flex-basis: 31%;
+  }
+  .promo__text {
+    width: 450px;
   }
   .card__info {
     flex-wrap: wrap;
@@ -486,7 +502,7 @@
   }
   .promo {
     background-size: 600px;
-    background-position: top right -360px;
+    background-position: top right -320px;
     padding: 50px;
     height: 280px;
   }
@@ -514,7 +530,7 @@
 
   .promo {
     background-size: 600px;
-    background-position: top right -400px;
+    background-position: top right -330px;
     padding: 50px;
     height: 250px;
     margin-bottom: 30px;
@@ -522,6 +538,11 @@
   .promo__title {
     font-size: 28px;
     line-height: 32px;
+  }
+  .promo__text {
+    font-size: 20px;
+    line-height: 24px;
+    width: 60%;
   }
   .card__name {
     font-size: 20px;
@@ -554,7 +575,7 @@
   }
   .promo {
     background-size: 500px;
-    background-position: top -20px right -300px;
+    background-position: top -20px right -330px;
     padding: 30px;
     height: 180px;
     margin-bottom: 30px;
@@ -618,9 +639,10 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 530px) {
   .promo {
     background-image: none;
+    height: auto;
   }
   .promo__title {
     font-size: 20px;
@@ -660,5 +682,39 @@
   }
   .modal__header {
     margin-bottom: 15px;
+  }
+}
+@media (max-width: 320px) {
+  .modal__row {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .food-name {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+  }
+  .food-price {
+    margin: 0;
+  }
+  .buttons {
+    margin-left: auto;
+    height: 40px;
+    order: 1;
+  }
+
+  .user {
+    order: 2;
+    margin: 15px auto 0;
+  }
+  .form-adress {
+    order: 3;
+  }
+  .button-exit {
+    margin-right: 20px;
+  }
+  .promo__title {
+    font-size: 18px;
+    line-height: 20px;
   }
 }
