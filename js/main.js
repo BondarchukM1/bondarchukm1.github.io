@@ -233,7 +233,7 @@ new Swiper('.swiper-container', {
   spped: 10,
   delay: 400,
   
-  effect:'flip',//"slide", "fade", "cube", "coverflow" or "flip"
+  effect:'slide',//"slide", "fade", "cube", "coverflow" or "flip"
 
 })  
 }
