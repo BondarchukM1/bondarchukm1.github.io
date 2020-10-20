@@ -195,7 +195,7 @@ function createCardsGoods(goods) {
                     </p>
                     <div class="button-price">
                       <div class="button-cart button cart-button">
-                        В корзину
+                       <p class="cart__text"> В корзину </p>
                         <img class="button-icon--right" src="img/cart-white.svg" alt="" />
                       </div>
                       <div class="card__food-price">${price} ₽</div>

@@ -185,7 +185,7 @@
 
 .card__img {
   width: 100%;
-
+  max-height: 60%;
   object-fit: scale-down;
 
   transition: transform 0.2s linear;
@@ -202,7 +202,7 @@
 .card__text {
   padding: 20px 24px 35px;
 }
-.card-goods:hover .button-cart.button.cart-button {
+.card-goods .button-cart.button.cart-button {
   display: flex;
 }
 .card__title {
@@ -328,6 +328,7 @@
   top: 0;
   left: 0;
   display: none;
+  z-index: 1000;
 }
 .is-open {
   display: flex;
@@ -559,6 +560,9 @@
   .restaurants__title {
     font-size: 28px;
   }
+  .cart__text {
+    display: none;
+  }
 }
 /*!!- 600 -!!*/
 @media (max-width: 600px) {
@@ -622,6 +626,7 @@
   }
   .card__img {
     width: 100%;
+
     object-fit: cover;
   }
   .modal__footer {
@@ -636,6 +641,9 @@
   }
   .modal__body {
     max-height: 70%;
+  }
+  .cart__text {
+    display: block;
   }
 }
 
@@ -684,7 +692,7 @@
     margin-bottom: 15px;
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 330px) {
   .modal__row {
     flex-wrap: wrap;
     align-items: center;
@@ -716,5 +724,11 @@
   .promo__title {
     font-size: 18px;
     line-height: 20px;
+  }
+  .cart__text {
+    display: none;
+  }
+  .button-price {
+    justify-content: space-between;
   }
 }
