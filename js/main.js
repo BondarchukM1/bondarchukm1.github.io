@@ -20,11 +20,13 @@ const restaurantsBlock = document.querySelector(".restaurants-block");
 const logo = document.querySelector(".logo");
 const goods = document.querySelector(".goods");
 const goodsInfo = document.querySelector(".goods__info");
+const formInput = document.querySelector(".form-search");//.form__input
+const formInput1 = document.querySelector(".form__input");//
 
 
 let login = localStorage.getItem('gloDelivery');
 let pass = localStorage.getItem('passDelivery');
-let restaurantInfo
+let restaurantInfo;
 
 const getData = async function(url) {
 
@@ -207,6 +209,70 @@ function createCardsGoods(goods) {
 }
 //createCardsGoods();
 
+function searching(event){
+   
+   
+  if (event.keyCode === 13) {//13- это код Enter
+  const target = event.target;
+  const value = target.value.toLowerCase();
+  formInput1.textContent = '';
+  let filterGoods = [];// filtered goods
+  let searchGoods = [];
+  promo.classList.add("hide");
+    restaurantsBlock.classList.add("hide");
+    goods.classList.remove("hide");
+    cardsGoods.textContent = '';
+    goodsInfo.textContent = '';
+  let numberSearch = 0;
+ 
+ /* getData('./db/partners.json').then(function(data){
+    const products = data.map(function(item){
+      return item.products;
+    });
+  products.forEach(function(product){
+    getData(`./db/${product}`)
+    .then(function(data){
+      filterGoods.push(...data);
+      searchGoods = filterGoods.filter(function(item){
+        return item.name.toLowerCase().includes(value);
+      })}).then(function(data){
+        alert("!");
+        console.log(typeof data);
+      data.forEach(createCardsGoods); 
+      })
+  })
+})*/
+ getData('./db/partners.json').then(function(data){
+    const products = data.map(function(item){
+      return item.products;
+    });
+  products.forEach(function(product){
+    getData(`./db/${product}`)
+    .then(function(data){
+      filterGoods.push(...data);
+      return filterGoods;
+      }).then(function(filterGoods){
+        searchGoods = filterGoods.filter(function(item){
+        return item.name.toLowerCase().includes(value);
+      } );
+      return searchGoods;
+  }).then(function(searchGoods){
+    console.log(searchGoods);
+    console.log(numberSearch);
+    numberSearch++;
+    if (numberSearch == 6){
+       searchGoods.forEach(createCardsGoods);
+    } 
+  })
+
+})
+ }
+      
+//!------------------------------------------
+ )
+ }
+}
+
 function init() {
   getData('./db/partners.json').then(function(data){
   data.forEach(createCardsRestaurants);
@@ -225,6 +291,7 @@ logo.addEventListener("click", mainPage);
 
 exitButton.addEventListener("click",exit);
 
+formInput.addEventListener("keydown",searching);
 
 
 new Swiper('.swiper-container', {

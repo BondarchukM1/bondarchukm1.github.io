@@ -1,7 +1,7 @@
 [
   {
 "id": "fh01",
-"name": "Борш",
+"name": "Борш суп",
 "description": "Свекла, моркофь, люк 250г",
 "price": "300",
 "image":"img/fh1.jpg"
@@ -15,14 +15,14 @@
   },
    {
 "id": "fh03",
-"name": "Пицаа",
+"name": "Пицца нихао",
 "description": "Соя 350г",
 "price": "350",
 "image":"img/fh3.jpg"
   },
    {
 "id": "fh04",
-"name": "Пицца",
+"name": "Пицца кольца перца",
 "description": "Люк, перец 300г",
 "price":"200",
 "image":"img/fh4.jpg"
@@ -36,7 +36,7 @@
   },
    {
 "id": "fh06",
-"name": "Будильник",
+"name": "Куриный десерт",
 "description": "Курятина, травятина 100г",
 "price": "900",
 "image":"img/fh6.jpg"
