@@ -1,0 +1,44 @@
+[
+  {
+"id": "ck01",
+"name": "Кирасу",
+"description": "Кару, мапу, риро 400г",
+"price": "200",
+"image":"img/ck1.jpg"
+  },
+   {
+"id": "ck02",
+"name": "Мапахо",
+"description": "Казу, капо, муса 300г",
+"price": "400",
+"image":"img/ck2.jpg"
+  },
+   {
+"id": "ck03",
+"name": "Узи мо по",
+"description": "Ки, чи, фа 350г",
+"price": "400",
+"image":"img/ck3.jpg"
+  },
+   {
+"id": "ck04",
+"name": "А ла шигу",
+"description": "Усинту, пазос, качо 500г",
+"price": "590",
+"image":"img/ck4.jpg"
+  },
+   {
+"id": "ck05",
+"name": "Иза ман ку",
+"description": "Кенто, парос, фуаг, ке 350г",
+"price": "360",
+"image":"img/ck5.jpg"
+  },
+   {
+"id": "ck06",
+"name": "Кирару",
+"description": "Курасе, пено, лостур 400г",
+"price": "432",
+"image":"img/ck6.jpg"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+"id": "t01",
+"name": "Суши Лосось ",
+"description": "Лосось, рис 32г",
+"price": 200,
+"image":"img/r_tanuki1.jpg"
+  },
+   {
+"id": "t02",
+"name": "Суши Угорь",
+"description": "Угорь, кунжут, унаги соус 33г",
+"price": "400",
+"image":"img/r_tanuki2.jpg"
+  },
+   {
+"id": "t03",
+"name": "Суши Креветка",
+"description": "Креветка тигровая, рис 32г",
+"price": "500",
+"image":"img/r_tanuki3.jpg"
+  },
+   {
+"id": "t04",
+"name": "Суши Чука",
+"description": "Водоросли Чука, нори, рис 30г",
+"price": "350",
+"image":"img/r_tanuki4.jpg"
+  },
+   {
+"id": "t05",
+"name": "Суши Спайси Тори",
+"description": "Ціпленок, нори, спайси соус, рис 35га",
+"price": "240",
+"image":"img/r_tanuki5.jpg"
+  },
+   {
+"id": "t06",
+"name": "Запеченные суши краб",
+"description": "Нори, яки соус, краб-крем, рис 35г",
+"price": "350",
+"image":"img/r_tanuki6.jpg"
+  }
+]

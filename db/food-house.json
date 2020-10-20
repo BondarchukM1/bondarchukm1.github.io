@@ -1,0 +1,44 @@
+[
+  {
+"id": "fh01",
+"name": "Борш",
+"description": "Свекла, моркофь, люк 250г",
+"price": "300",
+"image":"img/fh1.jpg"
+  },
+   {
+"id": "fh02",
+"name": "Кревы",
+"description": "Крефетки, кальмарики 200г",
+"price": "600",
+"image":"img/fh2.jpg"
+  },
+   {
+"id": "fh03",
+"name": "Пицаа",
+"description": "Соя 350г",
+"price": "350",
+"image":"img/fh3.jpg"
+  },
+   {
+"id": "fh04",
+"name": "Пицца",
+"description": "Люк, перец 300г",
+"price":"200",
+"image":"img/fh4.jpg"
+  },
+   {
+"id": "fh05",
+"name": "Суп, просто суп",
+"description": "Моркофь, картоха, даже мясо? 400г",
+"price": "450",
+"image":"img/fh5.jpg"
+  },
+   {
+"id": "fh06",
+"name": "Будильник",
+"description": "Курятина, травятина 100г",
+"price": "900",
+"image":"img/fh6.jpg"
+  }
+]

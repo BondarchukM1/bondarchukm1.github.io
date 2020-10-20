@@ -1,0 +1,61 @@
+[
+  {
+    "name":"Тануки",
+    "time_of_delivery":"40",
+    "stars":"4.5",
+    "price":"850",
+    "kitchen":"Суши",
+    "image":"img/imageP2.jpg",
+    "products":"tanuki.json"
+  }, 
+  {
+    "name":"Чайна",
+    "time_of_delivery":"35",
+    "stars":"4.4",
+    "price":"850",
+    "kitchen":"Суши",
+    "image":"img/imageP4.jpg",
+    "products":"china-kitchen.json"
+  }, 
+   {
+    "name":"Фуд хаус",
+    "time_of_delivery":"45",
+    "stars":"4.4",
+    "price":"1000",
+    "kitchen":"Пицца, бургер, бутер",
+    "image":"img/imageP5.jpg",
+    "products":"food-house.json"
+  },
+   {
+    "name":"Food Band",
+    "time_of_delivery":"35",
+    "stars":"4.3",
+    "price":"1300",
+    "kitchen":"Пицца, бургер",
+    "image":"img/imageP3.jpg",
+    "products":"food-band.json"
+  },
+  {
+    "name":"Пицца плюс",
+    "time_of_delivery":"90",
+    "stars":"5",
+    "price":"900",
+    "kitchen":"Пицца",
+    "image":"img/imageP1.jpg",
+    "products":"pizza-plus.json"
+  },
+  
+ 
+  {
+    "name":"Бутер в дом",
+    "time_of_delivery":"45",
+    "stars":"4.9",
+    "price":"300",
+    "kitchen":"Бургер",
+    "image":"img/imageP6.jpg",
+    "products":"buter-house.json"
+  }
+
+ 
+ 
+]

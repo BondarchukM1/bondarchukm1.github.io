@@ -19,26 +19,28 @@ const promo = document.querySelector(".promoblock");
 const restaurantsBlock = document.querySelector(".restaurants-block");
 const logo = document.querySelector(".logo");
 const goods = document.querySelector(".goods");
-
+const goodsInfo = document.querySelector(".goods__info");
 
 
 let login = localStorage.getItem('gloDelivery');
 let pass = localStorage.getItem('passDelivery');
+let restaurantInfo
+
+const getData = async function(url) {
+
+  const response = await fetch(url);
+
+  if (!response.ok) {
+    throw new Error(`Ошибка по адресу ${url}, status ${response.status}`);
+  }
+  return await response.json();
+};
+
+getData('./db/partners.json')
 
 
 
-enterButton.addEventListener("click",toggleModalAuth);
 
-closeAuth.addEventListener("click",toggleModalAuth);
-buttonNoSubmit.addEventListener("click",toggleModalAuth);
-buttonSubmit.addEventListener("click", authorization);
-cartButton.addEventListener("click",toggleModal);
-closeModal.addEventListener("click",toggleModal);
-closethis.addEventListener("click",toggleModal);
-cardsRestaurants.addEventListener("click", openGoods);
-logo.addEventListener("click", mainPage);
-
-exitButton.addEventListener("click",exit);
 
 authorization();
 function mainPage () {
@@ -105,28 +107,27 @@ function exit() {
  
 }; 
 
-function createCardsRestaurants() {
+function createCardsRestaurants(restaurant) {
+  const { name, time_of_delivery: timeOfDelivery,stars, price, kitchen, image, products } = restaurant;
   const card = `
-  <a  class="card card-restaurant card--hover wow flipInX" >
-              <img src="img/imageP1.jpg" alt="pizza plus" class="card__img" />
+  <a  class="card card-restaurant card--hover wow flipInX"  data-product="${products}">
+              <img src="${image}" alt="pizza plus" class="card__img" />
               <div class="card__text">
                 <div class="card__title">
-                  <h3 class="card__name">Пицца плюс</h3>
-                  <div class="card__time">50 мин</div>
+                  <h3 class="card__name">${name}</h3>
+                  <div class="card__time">${timeOfDelivery} мин</div>
                 </div>
                 <div class="card__info">
-                  <div class="card__star">4.5</div>
-                  <div class="card__price">От 900 ₽</div>
-                  <div class="card__type">Пицца</div>
+                  <div class="card__star">${stars}</div>
+                  <div class="card__price">От ${price} ₽</div>
+                  <div class="card__type">${kitchen}</div>
                 </div>
               </div>
             </a>
   `;
   cardsRestaurants.insertAdjacentHTML('beforeend', card);
 }
-createCardsRestaurants();
-createCardsRestaurants();
-createCardsRestaurants();
+
 
 
 
@@ -142,33 +143,62 @@ function openGoods(event) {
     restaurantsBlock.classList.add("hide");
     goods.classList.remove("hide");
     cardsGoods.textContent = '';
-    createCardsGoods();
-    createCardsGoods();
-    createCardsGoods();
+    goodsInfo.textContent = '';
+  
+  
+    restaurantInfo = restaurant.dataset.product;
+    getData(`./db/${restaurant.dataset.product}`).then(function(data){
+  data.forEach(createCardsGoods);
+});
+ getData('./db/partners.json').then(function(data){
+  data.forEach(createHeaderGoods);
+});
+  
   } else {toggleModalAuth(); }};
 }
 
 
+function createHeaderGoods(restaurant) {
+   const { name, time_of_delivery: timeOfDelivery,stars, price, kitchen, image, products } = restaurant;
+  if (restaurantInfo === products){
+ 
+  
+   
+  const headInfo=`
+  <div class="restaurants__heading">
+                  <h2 class="restaurants__title">${name}</h2>
+                  <div class="restaurant-info">
+                    <div class="card__info">
+                      <div class="card__star">${stars}</div>
+                      <div class="card__price">От ${price} ₽</div>
+                      <div class="card__type">${kitchen}</div>
+                    </div>
+                  </div>
+                </div>
+  `;
+   goodsInfo.insertAdjacentHTML('afterBegin', headInfo );};
+}
 
-function createCardsGoods() {
+function createCardsGoods(goods) {
+  const { id, name, description, price, image  } = goods;
   const card=`
    <div class="card card-goods wow flipInX">
-                  <img src="img/r_tanuki1.jpg" alt="pizza plus" class="card__img" />
+                  <img src="${image}" alt="pizza plus" class="card__img" />
                   <div class="card__text">
                     <div class="card__title">
                       <h3 class="card__name card__name--reg">
-                        Ролл угорь стандарт плюс
+                       ${name}
                       </h3>
                     </div>
                     <p class="card__ingredients">
-                      Рис, угорь, соус унаги, кунжут, водоросли нори.
+                      ${description}
                     </p>
                     <div class="button-price">
                       <div class="button-cart button cart-button">
                         В корзину
                         <img class="button-icon--right" src="img/cart-white.svg" alt="" />
                       </div>
-                      <div class="card__food-price">250 ₽</div>
+                      <div class="card__food-price">${price} ₽</div>
                     </div>
                   </div>
                 </div>
@@ -176,6 +206,26 @@ function createCardsGoods() {
    cardsGoods.insertAdjacentHTML('beforeend', card);
 }
 //createCardsGoods();
+
+function init() {
+  getData('./db/partners.json').then(function(data){
+  data.forEach(createCardsRestaurants);
+});
+
+enterButton.addEventListener("click",toggleModalAuth);
+
+closeAuth.addEventListener("click",toggleModalAuth);
+buttonNoSubmit.addEventListener("click",toggleModalAuth);
+buttonSubmit.addEventListener("click", authorization);
+cartButton.addEventListener("click",toggleModal);
+closeModal.addEventListener("click",toggleModal);
+closethis.addEventListener("click",toggleModal);
+cardsRestaurants.addEventListener("click", openGoods);
+logo.addEventListener("click", mainPage);
+
+exitButton.addEventListener("click",exit);
+
+
 
 new Swiper('.swiper-container', {
   loop: true,
@@ -185,5 +235,7 @@ new Swiper('.swiper-container', {
   
   effect:'flip',//"slide", "fade", "cube", "coverflow" or "flip"
 
- 
 })  
+}
+init ();
+
